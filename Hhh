@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desporto & Renda MZ — Desporto, Finanças e Renda Extra em Moçambique</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1320;--paper:#F6F3EC;
+    --gold:#C99A2E;--crimson:#A8321F;
+    --purple:#6B3FA0;--green:#1A7A4A;
+    --slate:#5C6B7A;--line:#D8D2C4;
+    --maxw:900px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--ink);color:#f0eee8;font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+
+  .masthead{background:linear-gradient(135deg,#070e1a 0%,#1a2a1a 100%);border-bottom:3px solid var(--green);padding:28px 20px;text-align:center;}
+  .masthead .kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+  .masthead h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,7vw,56px);line-height:1;color:#fff;}
+  .masthead .tagline{font-size:14px;color:#8aa0be;margin-top:8px;font-style:italic;font-family:'Fraunces',serif;}
+
+  nav.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;margin-top:18px;}
+  nav.tabs a{padding:8px 16px;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#8aa0be;border:1px solid #2a3a2a;border-radius:20px;transition:all .15s;}
+  nav.tabs a:hover{background:var(--green);color:#fff;border-color:var(--green);}
+
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+
+  article.post{padding:50px 0;border-bottom:1px solid #1e2a40;}
+  article.post:last-of-type{border-bottom:none;}
+
+  .post-date{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5a7a9a;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:block;}
+  .post h1, .post h2.title{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(24px,4vw,34px);line-height:1.15;color:#fff;margin-bottom:16px;}
+  .post .subtitle{font-size:14px;color:#8aa0be;font-style:italic;margin-bottom:20px;font-family:'Fraunces',serif;}
+
+  .post img{width:100%;border-radius:8px;margin:20px 0;display:block;}
+
+  .post h2{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#fff;margin:28px 0 12px;}
+  .post h3{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#e0eaf8;margin:22px 0 10px;}
+  .post p{font-size:15px;color:#c0cfe0;margin-bottom:14px;}
+  .post strong{color:#fff;}
+  .post blockquote{border-left:4px solid var(--gold);padding:8px 0 8px 16px;margin:24px 0;font-style:italic;color:#c0cfe0;font-family:'Fraunces',serif;font-size:17px;}
+
+  .card-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;}
+  @media(max-width:600px){.card-grid-2{grid-template-columns:1fr;}}
+  .info-card{background:#0d1728;border:1px solid #1e2a40;padding:16px;border-radius:6px;font-size:14px;color:#c0cfe0;}
+  .info-card strong{display:block;color:#fff;margin-bottom:4px;}
+
+  .warn{font-size:13px;color:#8aa0be;font-style:italic;margin-top:16px;padding-top:16px;border-top:1px dashed #1e2a40;}
+
+  .toc{background:#0d1728;border:1px solid #1e2a40;border-radius:8px;padding:24px;margin:30px auto;max-width:var(--maxw);}
+  .toc h3{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .toc ol{padding-left:20px;}
+  .toc li{margin-bottom:8px;}
+  .toc a{color:#c0cfe0;font-size:14px;}
+  .toc a:hover{color:var(--gold);}
+
+  .whats-float{position:fixed;bottom:20px;right:20px;z-index:50;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.4);}
+  .whats-float svg{width:28px;height:28px;fill:#fff;}
+
+  footer{background:#070e1a;color:#5a7a9a;margin-top:40px;padding:32px 20px;border-top:3px solid var(--green);text-align:center;font-size:12px;line-height:1.8;}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="kicker">Blog Oficial</div>
+  <h1>DESPORTO & RENDA MZ</h1>
+  <p class="tagline">Desporto, performance, tecnologia e renda extra para Moçambique</p>
+  <nav class="tabs">
+    <a href="#hidratacao">Hidratação</a>
+    <a href="#mental">Preparação Mental</a>
+    <a href="#redes">Redes Sociais</a>
+    <a href="#fotografia">Fotografia</a>
+    <a href="#pontos">Sistema de Pontos</a>
+    <a href="#negocio">Empreendedorismo</a>
+    <a href="#monetizar">Monetização</a>
+    <a href="#freefire">Free Fire</a>
+  </nav>
+</div>
+
+<div class="toc">
+  <h3>📑 Índice de Artigos</h3>
+  <ol>
+    <li><a href="#hidratacao">💧 Hidratação no Desporto: o que muita gente faz errado</a></li>
+    <li><a href="#mental">🧠 Como se preparar mentalmente antes de uma competição importante</a></li>
+    <li><a href="#redes">📱 O papel das redes sociais na divulgação do desporto local</a></li>
+    <li><a href="#fotografia">📸 Dicas simples para fotografar momentos desportivos com o telemóvel</a></li>
+    <li><a href="#pontos">⚽ Como funciona o sistema de pontos num campeonato de futebol</a></li>
+    <li><a href="#negocio">💼 Guia Completo do Empreendedor Moçambicano</a></li>
+    <li><a href="#monetizar">💼 5 Formas Comprovadas de Ganhar Dinheiro Online em 2026</a></li>
+    <li><a href="#freefire">🎮 Free Fire OB54: Tudo Sobre a Atualização de 9º Aniversário</a></li>
+  </ol>
+</div>
+
+<div class="container">
+
+<article class="post" id="hidratacao">
+  <span class="post-date">📅 8 de julho de 2026</span>
+  <h1>💧 Hidratação no Desporto: o que muita gente faz errado</h1>
+  <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=780&q=80" alt="Hidratação no desporto">
+  <p>Beber água parece simples, mas a forma como nos hidratamos antes, durante e depois do exercício influencia diretamente o desempenho — e a maioria das pessoas só pensa nisso quando já sente sede, o que já é tarde demais.</p>
+
+  <h2>Antes do esforço: a hidratação começa horas antes</h2>
+  <p>Chegar já desidratado ao início de um jogo ou treino reduz a capacidade de concentração e aumenta significativamente o risco de cãibras nos minutos finais. O corpo humano não consegue absorver grandes quantidades de água de uma só vez — por isso, beber 2 litros de uma vez, 10 minutos antes do jogo, não compensa dias de má hidratação.</p>
+  <p>O ideal é distribuir a ingestão de líquidos ao longo do dia, começando pela manhã, e não apenas na hora que antecede a atividade física. Sinais simples ajudam a monitorizar: se a urina está muito escura, é sinal de que o corpo já está em défice de água.</p>
+
+  <h2>Durante o exercício: pequenos goles, não grandes quantidades</h2>
+  <p>Durante uma atividade física intensa, o corpo perde água e eletrólitos (sódio, potássio) através do suor — a quantidade varia bastante com o clima e a intensidade do esforço. Em climas quentes como o de Moçambique, essa perda é ainda mais acentuada.</p>
+  <p><strong>📌 Regra prática:</strong> pequenos goles a cada 15-20 minutos são mais eficazes do que beber uma grande quantidade de uma só vez, que pode causar desconforto estomacal e prejudicar o rendimento em vez de ajudar.</p>
+  <p>Para treinos ou jogos com mais de uma hora de duração, apenas água pode não ser suficiente — bebidas isotónicas ou até água com uma pitada de sal ajudam a repor os eletrólitos perdidos e prevenir cãibras.</p>
+
+  <h2>Depois também conta — e costuma ser esquecido</h2>
+  <p>A recuperação pós-exercício costuma ser negligenciada, mas repor líquidos nas horas seguintes é tão importante quanto a hidratação durante a própria atividade. O corpo continua a perder água através do suor mesmo depois de o esforço físico terminar, especialmente em dias quentes.</p>
+  <p>Um sinal prático para saber se a reposição foi suficiente: pesar-se antes e depois do treino. Cada quilo perdido durante o exercício corresponde, de forma aproximada, a cerca de 1 litro de líquido que precisa de ser reposto nas horas seguintes.</p>
+
+  <h2>Erros comuns que comprometem o desempenho</h2>
+  <p>❌ <strong>Esperar sentir sede para beber água</strong> — quando a sede aparece, o corpo já está parcialmente desidratado.</p>
+  <p>❌ <strong>Beber apenas água em esforços muito longos</strong> — sem repor sódio, o risco de cãibras e até de hiponatremia (baixa concentração de sódio no sangue) aumenta.</p>
+  <p>❌ <strong>Ignorar a hidratação em dias nublados</strong> — a perda de líquidos por suor continua elevada mesmo sem sol direto, especialmente em climas húmidos como o litoral moçambicano.</p>
+  <p>💡 <strong>Dica final:</strong> um bom indicador de hidratação adequada é a cor da urina — quanto mais clara, melhor. Manter esse hábito de observação simples já evita a maioria dos problemas relacionados com desidratação no desporto.</p>
+</article>
+
+<article class="post" id="mental">
+  <span class="post-date">📅 8 de julho de 2026</span>
+  <h1>🧠 Como se preparar mentalmente antes de uma competição importante</h1>
+  <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=780&q=80" alt="Preparação mental no desporto">
+  <p>A preparação física recebe quase toda a atenção quando se fala em desporto, mas o lado mental do desempenho é igualmente decisivo — e muitas vezes é o que separa um atleta tecnicamente preparado de um atleta que realmente entrega o seu melhor no momento certo.</p>
+
+  <h2>Rotinas antes do jogo: previsibilidade reduz ansiedade</h2>
+  <p>Muitos atletas profissionais seguem uma rotina fixa antes de competir — desde a alimentação até pequenos rituais pessoais — porque a previsibilidade ajuda a reduzir a ansiedade. Quando o corpo e a mente já "sabem" o que vem a seguir, sobra menos espaço para o nervosismo tomar conta.</p>
+  <p>Essa rotina não precisa de ser complexa: pode ser a mesma sequência de aquecimento, a mesma música antes de entrar em campo, ou até a mesma refeição nas horas que antecedem o jogo. O importante é a consistência, não o ritual em si.</p>
+
+  <h2>Visualização: ensaiar mentalmente antes de executar fisicamente</h2>
+  <p>Imaginar mentalmente boas jogadas antes da competição é uma técnica usada por treinadores de alto rendimento, e pode ser adaptada por qualquer pessoa que pratique desporto a nível amador. A ciência por trás disso é interessante: estudos mostram que a visualização mental ativa áreas do cérebro semelhantes às ativadas durante o movimento físico real.</p>
+  <p>Nadadores olímpicos como Michael Phelps tornaram-se conhecidos por visualizar cada detalhe de uma prova — desde o momento de entrar na água até a sensação de tocar a parede no final. Não é coincidência: quanto mais detalhada e sensorial for a visualização (o que se vê, ouve e sente), mais eficaz ela tende a ser.</p>
+  <p><strong>📌 Como praticar:</strong> antes de dormir ou nas horas que antecedem o jogo, reserva 5-10 minutos para imaginar-te a executar as jogadas com precisão, tomando decisões rápidas e a manter a calma mesmo sob pressão.</p>
+
+  <h2>Respiração e controlo emocional</h2>
+  <p>A pressão e a ansiedade são emoções normais antes e durante competições — o problema não é senti-las, mas deixar que interfiram no desempenho. Técnicas de respiração profunda e consciente ajudam a reduzir a ansiedade e a manter a calma nos momentos de maior tensão.</p>
+  <p>Uma técnica simples e eficaz é a respiração diafragmática: inspirar lentamente pelo nariz durante 4 segundos, segurar por 2 segundos, e expirar pela boca durante 6 segundos. Repetir esse ciclo algumas vezes antes de entrar em competição ajuda a regular a frequência cardíaca e a acalmar a mente.</p>
+
+  <h2>Controlo de pensamentos durante a competição</h2>
+  <p>Especialistas em psicologia esportiva costumam trabalhar o controlo de pensamentos com os atletas — a capacidade de identificar quais pensamentos ajudam a manter o foco e quais atrapalham, especialmente nos momentos mais decisivos de uma prova ou jogo.</p>
+  <p>Um erro que apareceu numa jogada, por exemplo, não deveria ocupar espaço mental durante o resto do jogo. Atletas de elite treinam especificamente a capacidade de "resetar" mentalmente após um erro, focando apenas na próxima jogada.</p>
+  <p>💡 <strong>Dica prática:</strong> escolhe uma palavra-chave simples (tipo "foco" ou "calma") para repetir mentalmente nos momentos de maior pressão — atua como um âncora que ajuda a trazer a atenção de volta ao presente.</p>
+
+  <h2>Não é só para atletas profissionais</h2>
+  <p>Estas técnicas — rotina, visualização, respiração e controlo de pensamentos — não são exclusivas de atletas de elite. Qualquer pessoa que compita a nível amador, seja num torneio de bairro ou numa prova recreativa, pode aplicar as mesmas ferramentas para reduzir o nervosismo e melhorar o desempenho no dia da competição.</p>
+  <p>💡 <strong>Para começar hoje:</strong> escolhe apenas uma destas técnicas (a respiração é a mais fácil de aplicar imediatamente) e pratica-a antes do próximo treino ou jogo, mesmo que seja informal. A consistência importa mais do que aplicar todas de uma vez.</p>
+</article>
+
+<article class="post" id="redes">
+  <span class="post-date">📅 8 de julho de 2026</span>
+  <h1>📱 O papel das redes sociais na divulgação do desporto local</h1>
+  <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=780&q=80" alt="Redes sociais e desporto local">
+  <p>Equipas e atletas locais, que antes dependiam quase exclusivamente da imprensa tradicional para chegar ao público, hoje conseguem alcançar milhares de pessoas diretamente através das redes sociais — sem depender de um espaço na televisão ou numa página de jornal.</p>
+
+  <h2>Mais visibilidade para competições menores</h2>
+  <p>Campeonatos regionais ou modalidades menos populares ganharam um espaço que dificilmente teriam num jornal ou telejornal com tempo limitado. Clubes moçambicanos como o Costa do Sol, Ferroviário de Maputo e outras equipas do Moçambola já usam páginas próprias no Facebook para publicar resultados, calendários e bastidores — conteúdo que antes só chegava ao público através de relatos resumidos na imprensa tradicional.</p>
+  <p>Modalidades como basquetebol, voleibol e atletismo, que raramente ocupam espaço de destaque nos meios tradicionais, encontram nas redes sociais um canal direto para mostrar o trabalho de formação e as conquistas dos seus atletas, mesmo sem o alcance de um clube de futebol de primeira divisão.</p>
+
+  <h2>Aproximação com o torcedor</h2>
+  <p>Vídeos de bastidores, treinos e bate-papos diretos com atletas criaram uma relação mais próxima entre o público e o desporto, algo que era praticamente impossível há uma década. Um adepto que antes só via o seu clube favorito jogar 90 minutos por semana agora acompanha o dia a dia da equipa — desde o treino até viagens e concentrações.</p>
+  <p>Essa proximidade tem um efeito prático direto: equipas com presença ativa nas redes sociais conseguem atrair mais patrocínios e apoios, precisamente porque conseguem demonstrar com números (seguidores, alcance, interações) o valor da sua audiência.</p>
+
+  <h2>WhatsApp e Telegram como canais de informação rápida</h2>
+  <p>Além do Facebook e Instagram, cada vez mais clubes, federações e iniciativas desportivas moçambicanas usam canais de WhatsApp e Telegram para enviar resultados e alertas diretamente aos adeptos — um formato particularmente eficaz em Moçambique, onde o WhatsApp já é a aplicação mais usada no dia a dia digital da maioria da população.</p>
+  <p>Esse formato "leve" (texto curto, sem precisar de muitos dados móveis) também resolve um problema real: nem todas as zonas do país têm ligação à internet estável o suficiente para consumir vídeos longos ou páginas pesadas, mas uma mensagem de texto com o resultado do jogo chega sem problemas.</p>
+
+  <h2>O desafio: qualidade da informação</h2>
+  <p>Com o crescimento do número de páginas e perfis a cobrir desporto local, aumentou também o volume de informação não verificada e rumores sem confirmação oficial, especialmente em torno de transferências e contratações de treinadores. Para o adepto, vale a pena seguir fontes que costumam confirmar informação junto dos clubes antes de publicar, em vez de espalhar boatos por engajamento rápido.</p>
+  <p>💡 <strong>Dica prática:</strong> segue diretamente as páginas oficiais dos clubes e da Federação Moçambicana de Futebol (FMF) para confirmar informações importantes — elas continuam a ser a fonte mais fiável antes de qualquer boato circular nos grupos de WhatsApp.</p>
+</article>
